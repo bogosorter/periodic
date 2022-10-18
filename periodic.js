@@ -13,7 +13,12 @@ function display(element, mode) {
     document.querySelector('#period').innerHTML = mode != 'position'? period : '?';
 
     let configuration = element.electron_configuration_semantic;
-    configuration = configuration.replace(/(?<=[spdf])(\d+)/g, '<sup>$1</sup>');
+    try {
+        configuration = configuration.replace(/(?<=[spdf])(\d+)/g, '<sup>$1</sup>');
+    } catch {
+        // On some mobile devices, this won't work. Probably due to lack of
+        // regex support.
+    }
 
     document.querySelector('#configuration').innerHTML = mode == 'show'? configuration : '?';
 
