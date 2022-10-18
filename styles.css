@@ -53,3 +53,6 @@ p {
 option {
     color: black;
 }
+.white-link, .white-link:hover, .white-link:visited {
+    color: white;
+}
