@@ -18,6 +18,7 @@ function display(element, mode) {
     } catch {
         // On some mobile devices, this won't work. Probably due to lack of
         // regex support.
+        configuration = element.electron_configuration_semantic;
     }
 
     document.querySelector('#configuration').innerHTML = mode == 'show'? configuration : '?';
