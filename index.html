@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Periodic table of elements: training</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="./styles.css">
+        <script src="./table.js"></script>
+        <script src="./periodic.js"></script>
+    </head>
+    <body>
+
+        <!-- Navbar - nothing important going on here, jump to next section -->
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex" href="">
+                    Periodic
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://m7kra.github.io/">M7kra</a>
+                        </li>
+                        <div class="d-flex w-100"></div>
+                        <li class="nav-item">
+                            <a class="navbar-brand d-flex align-items-center" href="https://github.com/m7kra/Elements">
+                                <img src="./github.png" alt="" width="30px" height="30px" class="d-inline-block"
+                                    style="opacity: 0.55;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class='spacer-100'></div>
+        <div class='spacer-50'></div>
+
+        <h1 id='name'></h1>
+        <div class='spacer-50'></div>
+        <div id='element-container' class='d-flex justify-content-end'>
+            <div id='element'>
+                <p><sub id='atomic-number'>1</sub><span id='symbol'>H</span></p>
+            </div>
+        </div>
+        <div class='spacer-20'></div>
+        <div class='d-flex'>
+            <p class='me-4'>Group: <span id='group'>1</span></p>
+            <p>Period: <span id='period'>1</span></p>
+        </div>
+        <div class='spacer-20'></div>
+        <div class='d-flex'>
+            <select id='mode' class='form-select'>
+                <option value='number'>Atomic Number</option>
+                <option value='position'>Position</option>
+            </select>
+            <button id='button' class='ms-4 btn btn-outline-light'></button>
+        </div>
+
+        <div class='spacer-100'></div>
+        
+        <div class='container'>
+            <div class='row justify-content-center'>
+                <div class='col-8'>
+                    <h1>What's this?</h1>
+                    <p>I needed to practice my periodic table of elements knowledge.
+                    I had to learn two things: how to know an element's position
+                    based on its atomic number and how to know an element's atomic
+                    number based on its position. My first thought was to just pick
+                    up some random elements from the periodic table, which would
+                    take me a couple of minutes. Instead, I wound up programming a
+                    whole website to do it, which took me a little more :)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class='spacer-100'></div>
+        <div class='spacer-100'></div>
+    </body>
+</html>
