@@ -12,6 +12,8 @@ function display(element, mode) {
     const period = element.period + (element.ypos >= 9? ' (f block)' : '');
     document.querySelector('#period').innerHTML = mode != 'position'? period : '?';
 
+    document.querySelector('#configuration').innerHTML = mode == 'show'? element.electron_configuration_semantic : '?';
+
     const button = document.querySelector('#button');
     if (mode != 'show') {
         button.innerHTML = 'Show';

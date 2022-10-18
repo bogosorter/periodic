@@ -18,6 +18,7 @@ body {
     padding: 20px;
     transition: all 0.5s ease;
     background-color: rgba(255, 255, 255, 0.1);
+    flex-direction: column;
 }
 #element:hover {
     background-color: rgba(255, 255, 255, 0.2);
@@ -55,4 +56,7 @@ option {
 }
 .white-link, .white-link:hover, .white-link:visited {
     color: white;
+}
+#configuration {
+    font-size: 14px;
 }
