@@ -4,8 +4,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(9, 92, 120);
-    color: white;
 }
 
 #element {
@@ -17,14 +15,13 @@ body {
     align-items: center;
     padding: 20px;
     transition: all 0.5s ease;
-    background-color: rgba(255, 255, 255, 0.1);
     flex-direction: column;
+
+    --bg-color: 0, 0, 0;
+    background-color: rgba(var(--bg-color), 0.5);
 }
 #element:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-p {
-    margin: 0;
+    background-color: rgba(var(--bg-color), 0.8);
 }
 #atomic-number {
     font-size: 40px;
@@ -42,21 +39,31 @@ p {
 
 .form-select {
     background-color: transparent;
-    color: white;
+    color: rgba(0, 0, 0, 0.7);
     background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
     background-size: 20px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(0, 0, 0);
+}
 p {
     text-align: justify;
+    margin: 0;
+}
+p:not(#element p) {
+    color: rgba(0, 0, 0, 0.7);
 }
 
 option {
-    color: black;
+    color: rgba(0, 0, 0, 0.7);
 }
 .white-link, .white-link:hover, .white-link:visited {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 #configuration {
     font-size: 14px;
+}
+.nav-item img {
+    filter: brightness(0) invert(100%);
 }
