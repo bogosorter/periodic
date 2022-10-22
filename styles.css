@@ -16,6 +16,7 @@ body {
     padding: 20px;
     transition: all 0.5s ease;
     flex-direction: column;
+    border-radius: 10px;
 
     --bg-color: 0, 0, 0;
     background-color: rgba(var(--bg-color), 0.5);
