@@ -40,10 +40,16 @@ function display(element, mode) {
     document.querySelector('#configuration').innerHTML = mode == 'show'? newConfiguration : '?';
 
     // Change colors according to cpk-hex
-    const bgColor = hexToRGB(element['cpk-hex']);
-    const color = contrastingColor(bgColor);
-    document.querySelector('#element').style.setProperty('--bg-color', bgColor.join(', '));
-    document.querySelector('#element').style.setProperty('color', `rgb(${color})`);
+    const hex = element['cpk-hex'];
+    if (hex) {
+        const bgColor = hexToRGB(hex);
+        const color = contrastingColor(bgColor);
+        document.querySelector('#element').style.setProperty('--bg-color', bgColor.join(', '));
+        document.querySelector('#element').style.setProperty('--color-08', `rgb(${color})`);
+    } else {
+        document.querySelector('#element').style.setProperty('--bg-color', `100, 100, 100`);
+        document.querySelector('#element').style.setProperty('--color-08', `54, 59, 64`);
+    }
 
 
     const button = document.querySelector('#button');
@@ -60,7 +66,7 @@ function display(element, mode) {
  * Chooses a random element from the periodic table.
  */
 function chooseElement() {
-    return table[Math.floor(Math.random() * table.length)];
+    return table[Math.floor(Math.random() * (table.length - 1))]
 }
 
 /**
